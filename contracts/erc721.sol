@@ -4,13 +4,16 @@ pragma solidity ^0.8.1;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
+import "hardhat/console.sol";
+
 //Inherit the imported contract
-contract ERC721Token is ERC721URIStorage {
+contract Erc721Token is ERC721URIStorage {
+
  // this helps to keep track of tokenId
     using Counters for Counters.Counter; 
     Counters.Counter private _tokenIds;
 
-// pass the token name and symbol 
+// Pass the name of the nft token and it's symbol 
     constructor() ERC721("Oiler","O") {
         console.log("ERC721");
     }
