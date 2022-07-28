@@ -22,12 +22,12 @@ contract Erc721Token is ERC721URIStorage {
         // get current tokenId 
         uint newTokenId = _tokenIds.current();
         //mint nft to the sender
-        _SafeMint(msg.sender, newTokenId);
+        _safeMint(msg.sender, newTokenId);
 
         //nft data
-        _setTokenUrI(newTokenId, blabla);
+        _setTokenURI(newTokenId, "blabla");
         
         //Increment tokenId for the next nft that will be minted
-        _tokenIds.Increment();
+        _tokenIds.increment();
     }
 }
