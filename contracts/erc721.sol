@@ -25,7 +25,8 @@ contract Erc721Token is ERC721URIStorage {
         _safeMint(msg.sender, newTokenId);
 
         //nft data
-        _setTokenURI(newTokenId, "blabla");
+        _setTokenURI(newTokenId, "https://jsonkeeper.com/b/S5UV");
+        console.log("New NFT has been minted with the newTokenId & to..",newTokenId,msg.sender);
         
         //Increment tokenId for the next nft that will be minted
         _tokenIds.increment();
