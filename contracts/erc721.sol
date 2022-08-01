@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.1; 
+
 // Import OpenZeppelin Contracts.
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
-
 import "hardhat/console.sol";
 
 //Inherit the imported contract
@@ -19,8 +19,10 @@ contract Erc721Token is ERC721URIStorage {
     }
     // Function to mint nft
     function mintNft () public {
+
         // get current tokenId 
         uint newTokenId = _tokenIds.current();
+        
         //mint nft to the sender
         _safeMint(msg.sender, newTokenId);
 
